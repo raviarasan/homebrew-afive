@@ -12,7 +12,7 @@ class Afive < Formula
   # depends_on "cmake" => :build
 
   def install
-    system "./configure", "--enable-debug",
+    #system "./configure", "--enable-debug",
                           "--enable-dependency-tracking",
                           "--enable-silent-rules",
                           "--prefix=#{afive}"
