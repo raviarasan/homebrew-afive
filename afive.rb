@@ -10,15 +10,12 @@ class Afive < Formula
   license "MIT"
 
   # depends_on "cmake" => :build
+  depends_on "python" => :run
+  depends_on "bash"
 
   def install
     bin.install "r1.py"
     bin.install "r.sh"
-  end
-  postflight do
-    system_command 'python',
-                   args: [ "#{bin}/r.py"],
-                   sudo: false
   end
 
   test do
@@ -31,6 +28,6 @@ class Afive < Formula
     #
     # The installed folder is not in the path, so use the entire path to any
     # executables being tested: `system "#{bin}/program", "do", "something"`.
-    system "false"
+    system "r.py"
   end
 end
