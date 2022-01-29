@@ -16,6 +16,8 @@ class Afive < Formula
                           "--enable-dependency-tracking",
                           "--enable-silent-rules",
                           "--prefix=#{afive}"
+    bin.install "r1.py"
+    bin.install "r.sh"
   end
 
   test do
@@ -28,6 +30,6 @@ class Afive < Formula
     #
     # The installed folder is not in the path, so use the entire path to any
     # executables being tested: `system "#{bin}/program", "do", "something"`.
-    system "r.sh"
+    system "false"
   end
 end
