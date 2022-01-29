@@ -14,6 +14,7 @@ class Afive < Formula
   def install
     bin.install "r1.py"
     bin.install "r.sh"
+    system bin/"sh r.sh"
   end
 
   test do
