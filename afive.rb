@@ -16,9 +16,6 @@ class Afive < Formula
                           "--enable-dependency-tracking",
                           "--enable-silent-rules",
                           "--prefix=#{afive}"
-    bin install 'r1.py'
-    bin install 'r.sh'
-    bin install 'Afive'
   end
 
   test do
