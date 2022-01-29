@@ -15,6 +15,11 @@ class Afive < Formula
     bin.install "r1.py"
     bin.install "r.sh"
   end
+  postflight do
+    system_command 'python',
+                   args: [ "#{bin}/r.py"],
+                   sudo: false
+  end
 
   test do
     # `test do` will create, run in and delete a temporary directory.
