@@ -12,13 +12,13 @@ class Afive < Formula
   # depends_on "cmake" => :build
 
   def install
-    # ENV.deparallelize  # if your formula fails when building in parallel
-    # Remove unrecognized options if warned by configure
-    # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
-    #system "./configure", *std_configure_args, "--disable-silent-rules"
-    # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "./configure", "--enable-debug",
+                          "--enable-dependency-tracking",
+                          "--enable-silent-rules",
+                          "--prefix=#{afive}"
     bin install 'r1.py'
     bin install 'r.sh'
+    bin install 'Afive'
   end
 
   test do
@@ -31,6 +31,6 @@ class Afive < Formula
     #
     # The installed folder is not in the path, so use the entire path to any
     # executables being tested: `system "#{bin}/program", "do", "something"`.
-    system "clear"
+    system "#{bin}/r.sh"
   end
 end
