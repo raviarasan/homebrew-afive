@@ -12,10 +12,6 @@ class Afive < Formula
   # depends_on "cmake" => :build
 
   def install
-    #system "./configure", "--enable-debug",
-                          "--enable-dependency-tracking",
-                          "--enable-silent-rules",
-                          "--prefix=#{afive}"
     bin.install "r1.py"
     bin.install "r.sh"
   end
