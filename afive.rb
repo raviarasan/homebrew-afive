@@ -1,7 +1,7 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-class afive < Formula
+class Afive < Formula
   desc "four"
   homepage "bdiplus.com"
   url "https://github.com/raviarasan/homebrew-afour/archive/refs/tags/v2.0.tar.gz"
